@@ -7,8 +7,8 @@ import jakarta.persistence.*;
 @Table(name = "spotify_user")
 public class User extends AbstractAuditingEntity<Long> {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userSequenceGenerator")
-    @SequenceGenerator(name = "UserSequenceGenerator", sequenceName = "user_generator", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+    @SequenceGenerator(name = "user_generator", sequenceName = "user_generator", allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
